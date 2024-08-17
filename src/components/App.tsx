@@ -56,14 +56,19 @@ const App: React.FC = () => {
 
   return (
     <div>
+      <h1>Todo list</h1>
       <div>
         <input
           value={value}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           ref={inputRef}
+          style={{ padding: "2px 5px" }}
+          placeholder="add todo..."
         />
-        <button onClick={addTodo}>Add</button>
+        <button onClick={addTodo} style={{ margin: "0 5px" }}>
+          Add
+        </button>
       </div>
       <TodoList items={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
     </div>
